@@ -31,10 +31,9 @@ body {
     padding: 4px 12px;
 }
 
-input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: searchfield-cancel-button;
-    display: block;
+    filter: brightness(0) saturate(100%);
+    cursor: pointer;
 }
 
 #search input {
