@@ -73,3 +73,19 @@ function showInfo(json) {
 function showAlert(msg) {
   document.querySelector("#alert").innerHTML = msg
 }
+
+function clearSearch() {
+  document.getElementById("city_name").value = ""
+  document.getElementById("clear-btn").style.display = "none"
+}
+
+function toggleClearButton() {
+  const input = document.getElementById("city_name")
+  const clearBtn = document.getElementById("clear-btn")
+
+  if (input.value.trim() !== "") {
+    clearBtn.style.display = "block"
+  } else {
+    clearBtn.style.display = "none"
+  }
+}
