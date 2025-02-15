@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles/styles.css">
     <title>Weather forecast</title>
 </head>
+
 <body>
     <div id="container">
         <form id="search">
             <i class="fa-solid fa-location-dot"></i>
-            <input 
-                type="search" 
-                name="city_name" 
-                id="city_name" 
-                placeholder="Buscar cidade"
-            >
+            <input type="search" name="city_name" id="city_name" placeholder="Buscar cidade"
+                oninput="toggleClearButton()">
             <button type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+            <button id="clear-btn" onclick="clearSearch()"><img src="./src/images/x2.svg" alt=""></button>
         </form>
 
         <div id="weather">
@@ -28,10 +29,10 @@
             <div id="infos">
                 <div id="temp">
                     <img id="temp_img" src="http://openweathermap.org/img/wn/04d@2x.png" alt="">
-                    
+
                     <div>
                         <p id="temp_value">
-                            32 
+                            32
                         </p>
                         <p id="temp_description">
                             Ensolarado
@@ -95,4 +96,5 @@
     </div>
     <script src="src/javascript/script.js"></script>
 </body>
+
 </html>

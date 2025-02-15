@@ -1,16 +1,16 @@
 document.querySelector('#search').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const cityName = document.querySelector('#city_name').value;
+    const cityName = document.querySelector('#city_name').value.trimEnd();
 
     if (!cityName) {
         document.querySelector("#weather").classList.remove('show');
-        showAlert('Você precisa digitar uma cidade...');
+        showAlert('Por favor, digitar uma cidade...');
         return;
     }
 
-    const apiKey = '8a60b2de14f7a17c7a11706b2cfcd87c';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityName)}&appid=${apiKey}&units=metric&lang=pt_br`
+    const apiKey = "8a60b2de14f7a17c7a11706b2cfcd87c"
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityName)}&appid=${apiKey}&units=metric&lang=pt_br`;
 
     const results = await fetch(apiUrl);
     const json = await results.json();
@@ -53,6 +53,12 @@ function showInfo(json){
     document.querySelector('#humidity').innerHTML = `${json.humidity}%`;
     document.querySelector('#wind').innerHTML = `${json.windSpeed.toFixed(1)}km/h`;
 }
+
+function clearSearch() {
+    document.getElementById('city_name').value = '';
+    document.getElementById('city_name').focus();
+}
+
 
 function showAlert(msg) {
     document.querySelector('#alert').innerHTML = msg;
