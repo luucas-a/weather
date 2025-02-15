@@ -29,30 +29,6 @@ body {
     border: 1px solid #bdbdbd;
     border-radius: 10px;
     padding: 4px 12px;
-    position: relative;
-}
-
-
-
-input[type="search"]::-webkit-search-cancel-button {
-    display: none;
-}
-
-#clear-btn {
-    position: absolute;
-    right: 30px;
-    top: 4px;
-    background: transparent;
-    border: none;
-    font-size: 18px;
-    color: #000;
-    cursor: pointer;
-    display: none;
-}
-
-
-input[type="search"]:not(:placeholder-shown)+#clear-btn {
-    display: block;
 }
 
 #search input {
@@ -171,5 +147,5 @@ input[type="search"]:not(:placeholder-shown)+#clear-btn {
 }
 
 .fa-magnifying-glass {
-    color: #000
+    color: #000;
 }
