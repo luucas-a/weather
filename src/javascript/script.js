@@ -1,7 +1,7 @@
 document.querySelector('#search').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const cityName = document.querySelector('#city_name').value.trimEnd();
+    const cityName = document.querySelector('#city_name').value.trim();
 
     if (!cityName) {
         document.querySelector("#weather").classList.remove('show');
